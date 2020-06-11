@@ -255,7 +255,7 @@ class SimpleReactValidator {
     },
 
     momentInstalled() {
-      if (!window || !window.moment || typeof moment !== "function") {
+      if (typeof moment !== "function") {
         console.warn('Date validators require using momentjs https://momentjs.com and moment objects.');
         return false;
       } else {
